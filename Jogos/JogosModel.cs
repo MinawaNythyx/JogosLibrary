@@ -9,10 +9,10 @@ namespace Jogos
     {
         public int ID { get; set; }
         public string Nome { get; set; }
-        public string DataLan { get; set; }
+        public DateTime DatadeLancamento { get; set; }
         public string Genero { get; set; }
         public string Plataforma { get; set; }
-        public string Dev { get; set; }
-        public int NumJog { get; set; }
+        public string Desenvoveldora { get; set; }
+        public int NumerodeJogadores { get; set; }
     }
 }

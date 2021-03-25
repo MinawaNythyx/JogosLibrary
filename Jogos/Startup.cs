@@ -30,7 +30,7 @@ namespace Jogos
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Jogos", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Biblioteca de Jogos", Version = "v1" });
             });
         }
 

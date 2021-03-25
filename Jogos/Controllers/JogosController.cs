@@ -11,19 +11,42 @@ namespace Jogos.Controllers
     [ApiController]
     public class JogosController : ControllerBase
     {
-        [HttpGet]
-        public IActionResult Get(string nome)
+        List<JogosModel> listJogMod = new List<JogosModel>();
+        //JogosModel jogosMod = new JogosModel();
+        DBconnection dBconnection = new DBconnection();
+
+        [HttpGet("GetNome/{nome}")]
+        public IActionResult GetNome(string nome)
         {
-            JogosModel jogosMod = new JogosModel();
-            DBconnection dBconnection = new DBconnection();
-            jogosMod = dBconnection.JogosDBReceive(nome);
-            return Ok(jogosMod);
+            try
+            {
+                listJogMod = dBconnection.JogosDBReceive(nome, "nome");
+                return Ok(listJogMod);
+            }
+            catch(Exception erro)
+            {
+                throw new Exception("Ocorreu um erro ao buscar os dados" + erro.Message);
+            }
+        }
+
+        [HttpGet("GetID/{id}")]
+        public IActionResult GetID(string id)
+        {
+            try
+            {
+                listJogMod = dBconnection.JogosDBReceive(id, "id");
+                return Ok(listJogMod);
+            }
+            catch(Exception erro)
+            {
+                throw new Exception("Ocorreu um erro ao buscar os dados" + erro.Message);
+            }
         }
 
         [HttpPost]
         public IActionResult Post(JogosModel jogosModel)
         {
-            return Ok("Funcionou");
+            return Ok(dBconnection.JogosDBSend(jogosModel));
         }
     }
 }

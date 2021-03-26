@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace Jogos
 {
+    //Modelo usado no JSON para receber e enviar os dados para banco de dados
     public class JogosModel
     {
         public int ID { get; set; }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Jogos
 {
+    //Esse metodo foi criado automaticamente
     public class Program
     {
         public static void Main(string[] args)

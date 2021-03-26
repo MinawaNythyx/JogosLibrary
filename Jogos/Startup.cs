@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace Jogos
 {
+    //Esse metodo foi gerado automaticamente
     public class Startup
     {
         public Startup(IConfiguration configuration)

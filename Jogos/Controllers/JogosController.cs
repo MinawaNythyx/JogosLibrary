@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Jogos.Controllers
 {
     //Rota utilizada para ativar a API
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class JogosController : ControllerBase
     {

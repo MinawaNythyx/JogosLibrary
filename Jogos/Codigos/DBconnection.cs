@@ -13,7 +13,7 @@ namespace Jogos
         //String de conexão com o banco de dados na nuvem
         private string ConnectionString
         {
-            get { return @"Server=tcp:jogoslibrary.database.windows.net,1433;Initial Catalog=JogosLibrary;Persist Security Info=False;User ID=Minawa;Password=Drash72/;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30"; }
+            get { return @"Server=tcp:jogoslibrary.database.windows.net,1433;Initial Catalog=JogosLibrary;Persist Security Info=False;User ID={MyID};Password={MyPassword};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30"; }
         }
         //Comandos para conexão instanciandos
         SqlConnection connection;

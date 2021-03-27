@@ -140,5 +140,25 @@ namespace Jogos
                 ConnectionClose();
             }
         }
+
+        public int DataMax()
+        {
+            int value = 0;
+            ConnectionOpen();
+
+            sql = "SELECT MAX(ID) FROM Jogos";
+
+            SCmd = new SqlCommand(sql, connection);
+
+            dataReader = SCmd.ExecuteReader();
+
+            while(dataReader.Read())
+            {
+                value = Convert.ToInt32(dataReader.GetValue(0));
+            }
+            ConnectionClose();
+            dataReader.Close();
+            return value;
+        }
     }
 }

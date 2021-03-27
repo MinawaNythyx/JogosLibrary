@@ -23,8 +23,8 @@ namespace Jogos.Controllers
         public IActionResult GetNome(string nome)
         {
             //Lista recebida atraves do metodo
-            listJogMod = dBconnection.JogosDBReceive(nome, "nome");
-            return Ok(listJogMod);
+            //listJogMod = dBconnection.JogosDBReceive(nome, "nome");
+            return Ok(dBconnection.JogosDBReceive(nome, "nome"));
         }
 
         //Metodo Get para buscar por ID retornando um unico item
@@ -41,7 +41,7 @@ namespace Jogos.Controllers
         public IActionResult Post(JogosModel jogosModel)
         {
             //Retornando um bool para saber se foi corretamente inserido
-            return Ok(dBconnection.JogosDBSend(jogosModel));
+            return Ok(jogosModel);
         }
     }
 }
